@@ -37,17 +37,19 @@
 	<hr>
 	<table>
 		<thead>
-			<tr><th>순번</th><th>학생코드</th><th>이름</th><th>전화번호</th></tr>
+			<tr><th>순번</th><th>학생코드</th><th>이름</th><th>전화번호</th><th>등록일</th></tr>
 		</thead>
 		<tbody>
 <% 
 	while(rs.next()){ 
+		
 %>
 	<tr>
 		<td><%=rs.getInt("member_seq") %></td>
 		<td><%=rs.getInt("c_no") %></td>
-		<td><%=rs.getString("c_name") %></td>
+		<td><%=rs.getString("c_name") %>님</td>
 		<td><%=rs.getString("phone") %></td>
+		<td><%=rs.getString("regist_date") %></td>
 	</tr>
 <% 
 	}
