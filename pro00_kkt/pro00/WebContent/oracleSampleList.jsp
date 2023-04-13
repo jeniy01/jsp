@@ -13,12 +13,10 @@
 	String sql = "";
 	try {
 		Class.forName(driver);
-		try {
-			conn = DriverManager.getConnection(url, user, pass);
-			sql = "select * from tbl_member_202201";
-			try {
-				pstmt = conn.prepareStatement(sql);
-				rs = pstmt.executeQuery();	
+		conn = DriverManager.getConnection(url, user, pass);
+		sql = "select * from tbl_member_202201";
+		pstmt = conn.prepareStatement(sql);
+		rs = pstmt.executeQuery();	
 %>
 <!DOCTYPE html>
 <html>
@@ -76,16 +74,10 @@ th { background-color:#333; color:#fff; }
 </body>
 </html>
 <%
-				rs.close();
-				pstmt.close();
-				conn.close();
-			} catch(SQLException e){
-				System.out.println("SQL 전송 실패");
-			}
-		} catch(SQLException e){
-			System.out.println("데이터베이스 연결 실패~!");
-		}
-	} catch(ClassNotFoundException e){
+		rs.close();
+		pstmt.close();
+		conn.close();
+	} catch(Exception e){
 		System.out.println("드라이버 로딩 실패~!");
 	}
 %>
