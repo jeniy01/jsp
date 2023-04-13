@@ -67,13 +67,13 @@ th { background-color:#333; color:#fff; }
 	pstmt.close();
 	conn.close();
 	
-	} catch(SQLException e){
-		System.out.println("SQL 전송 실패");
-	}
+			} catch(SQLException e){
+				System.out.println("SQL 전송 실패");
+			}
 		} catch(SQLException e){
 			System.out.println("데이터베이스 연결 실패");
 		}
-			} catch(ClassNotFoundException e){
-				System.out.println("드라이버 로딩 실패");
-			}
+	} catch(ClassNotFoundException e){
+		System.out.println("드라이버 로딩 실패");
+	}
 %>

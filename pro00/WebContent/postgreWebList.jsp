@@ -15,7 +15,7 @@
 		Class.forName(driver);
 		try{
 			conn = DriverManager.getConnection(url,user,pass);
-			sql = "select * from tbl_emp_202108";
+			sql = "select * from countries";
 			try{
 				pstmt = conn.prepareStatement(sql);
 				rs = pstmt.executeQuery();
@@ -36,24 +36,25 @@ th { background-color:#333; color:#fff; }
 </style>
 </head>
 <body>
-	<h2>사원목록</h2>
+	<h2>국가 목록</h2>
 	<hr>
 	<nav>
 		<a href="index.jsp">메인으로</a>
+		<a href="postgreWebInsert.jsp">국가 등록하기</a>
 	</nav>
 	<hr>
 	<table>
 		<thead>
-			<tr><th>사원번호</th><th>사원명</th><th>전화번호</th></tr>
+			<tr><th>국가코드</th><th>국가명</th></tr>
 		</thead>
 		<tbody>
 <% 
 	while(rs.next()){ 
 %>
 	<tr>
-		<td><%=rs.getString("empno") %></td>
-		<td><%=rs.getString("empname") %></td>
-		<td><%=rs.getString("tel1") %>-<%=rs.getString("tel2") %>-<%=rs.getInt("tel3") %></td>
+		<td><%=rs.getString("country_code") %></td>
+		<td><a href="postgreWebUpdate.jsp?country_name=<%=rs.getString("country_name") %>">
+			<%=rs.getString("country_name") %></a></td>
 	</tr>
 <% 
 	}
