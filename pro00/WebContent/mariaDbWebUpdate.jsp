@@ -75,7 +75,7 @@
 			<tr><td colspan="2">
 				<input type="submit" value="수정"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 				<input type="reset" value="취소">
-				<a href="oracleWebDel.jsp?id=<%=id %>">과목 삭제</a>
+				<a href="mariaDbWebDel.jsp?id=<%=id %>">과목 삭제</a>
 			</td></tr>			
 		</tbody>
 	</table>

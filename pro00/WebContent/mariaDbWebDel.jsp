@@ -32,7 +32,7 @@
 				}
 				pstmt.close();
 				conn.close();
-				response.sendRedirect("oracleWebList.jsp");
+				response.sendRedirect("mariaDbWebList.jsp");
 			} catch(SQLException e) {
 				System.out.println("SQL 구문 실패");
 			}
