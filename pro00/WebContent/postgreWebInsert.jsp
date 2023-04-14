@@ -11,16 +11,21 @@
 <body>
 	<nav>
 		<a href="index.jsp">메인으로</a>
-		<a href="postgreWebList.jsp">국가 목록</a>
+		<a href="postgreWebList.jsp">좌석 목록</a>
 	</nav>
-	<h2>국가 정보 등록</h2>
+	<h2>좌석 정보 등록</h2>
 	<form action="postgreInsertPro.jsp" method="post">
-		<label for="country_code">국가코드</label> : 
-		<input type="text" name="country_code" id="country_code" required>
+		<label for="seatno">좌석번호</label> : 
+		<input type="text" name="seatno" id="seatno" required>
 		<input type="button" value="중복확인" id="confirm_btn"><br><br>
-		<label for="country_name">국가명</label> : 
-		<input type="text" name="country_name" id="country_name" required><br><br>
-		<input type="submit" value="국가 등록"> &nbsp; &nbsp; &nbsp; &nbsp;
+		<label for="office">사무실 위치</label> : 
+		<input type="text" name="office" id="office" required><br><br>
+		<label for="callno">전화번호</label> : 
+		<input type="text" name="callno" id="callno" required><br><br>
+		<label>사용여부</label> : 
+		<input type="radio" name="useflag" value="Y" checked> Y
+		<input type="radio" name="useflag" value="N"> N <br><br><br>
+		<input type="submit" value="좌석 등록"> &nbsp; &nbsp; &nbsp; &nbsp;
 		<input type="reset" value="취소">
 	</form>
 </body>

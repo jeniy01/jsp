@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+    pageEncoding="UTF-8" %>
 <%@ page import="java.sql.*" %>
 <%
 	String	driver = "com.mysql.cj.jdbc.Driver";
@@ -40,6 +40,7 @@ th { background-color:#333; color:#fff; }
 	<hr>
 	<nav>
 		<a href="index.jsp">메인으로</a>
+		<a href="mySqlWebInsert.jsp">회원 등록하기</a>
 	</nav>
 	<hr>
 	<table>
@@ -49,11 +50,11 @@ th { background-color:#333; color:#fff; }
 		<tbody>
 <%
 	while(rs.next()){ 
-		String d1 = rs.getString("pw").substring(0, 1);
 %>
 	<tr>
-		<td><%=rs.getString("id") %></td><td><%=d1 %>***</td>
-		<td><%=rs.getString("name") %></td>
+		<td><a href="mySqlWebUpdate.jsp?id=<%=rs.getString("id") %>"><%=rs.getString("id") %></a></td>
+		<td><%=rs.getString("pw") %></td>
+		<td><%=rs.getString("name") %>님</td>
 	</tr>
 <%
 	}

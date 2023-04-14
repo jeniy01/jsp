@@ -15,7 +15,7 @@
 		Class.forName(driver);
 		try{
 			conn = DriverManager.getConnection(url,user,pass);
-			sql = "select * from countries";
+			sql = "select * from tbl_seat_202108";
 			try{
 				pstmt = conn.prepareStatement(sql);
 				rs = pstmt.executeQuery();
@@ -36,25 +36,25 @@ th { background-color:#333; color:#fff; }
 </style>
 </head>
 <body>
-	<h2>국가 목록</h2>
+	<h2>좌석 목록</h2>
 	<hr>
 	<nav>
 		<a href="index.jsp">메인으로</a>
-		<a href="postgreWebInsert.jsp">국가 등록하기</a>
+		<a href="postgreWebInsert.jsp">좌석 등록하기</a>
 	</nav>
 	<hr>
 	<table>
 		<thead>
-			<tr><th>국가코드</th><th>국가명</th></tr>
+			<tr><th>좌석번호</th><th>사무실 위치</th><th>전화번호</th></tr>
 		</thead>
 		<tbody>
 <% 
 	while(rs.next()){ 
 %>
 	<tr>
-		<td><%=rs.getString("country_code") %></td>
-		<td><a href="postgreWebUpdate.jsp?country_name=<%=rs.getString("country_name") %>">
-			<%=rs.getString("country_name") %></a></td>
+		<td><a href="postgreWebUpdate.jsp?seatno=<%=rs.getString("seatno") %>"><%=rs.getString("seatno") %></a></td>
+		<td><%=rs.getString("office") %></td>
+		<td><%=rs.getString("callno") %></td>
 	</tr>
 <% 
 	}
@@ -67,14 +67,13 @@ th { background-color:#333; color:#fff; }
 	rs.close();
 	pstmt.close();
 	conn.close();
-	
-	} catch(SQLException e){
-		System.out.println("SQL 전송 실패");
-	}
+			} catch(SQLException e){
+				System.out.println("SQL 전송 실패");
+			}
 		} catch(SQLException e){
 			System.out.println("데이터베이스 연결 실패");
 		}
-			} catch(ClassNotFoundException e){
-				System.out.println("드라이버 로딩 실패");
-			}
+	} catch(ClassNotFoundException e){
+		System.out.println("드라이버 로딩 실패");
+	}
 %>

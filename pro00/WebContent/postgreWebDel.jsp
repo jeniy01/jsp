@@ -5,13 +5,13 @@
 	request.setCharacterEncoding("utf-8");
 	response.setContentType("text/html; charset=utf-8");
 	
-	String c_no = request.getParameter("c_no");
-	
-	String driver = "oracle.jdbc.driver.OracleDriver";
-	String url = "jdbc:oracle:thin:@localhost:1521:xe";
-	String user = "system";
+	String seatno = request.getParameter("seatno");
+
+	String driver = "org.postgresql.Driver";
+	String url = "jdbc:postgresql://localhost/sample";
+	String user = "postgres";
 	String pass = "1234";
-	
+
 	Connection conn = null;
 	PreparedStatement pstmt = null;
 	String sql = "";
@@ -19,20 +19,20 @@
 	try {
 		Class.forName(driver);
 		try {
-			conn = DriverManager.getConnection(url, user, pass);
-			sql = "delete from TBL_MEMBER_202201 where c_no=?";
+			conn = DriverManager.getConnection(url,user,pass);
+			sql = "delete from tbl_seat_202108 where seatno=?";
 			try {
 				pstmt = conn.prepareStatement(sql);
-				pstmt.setString(1, c_no);
+				pstmt.setString(1, seatno);
 				a = pstmt.executeUpdate();
 				if(a>0){
-					System.out.println("수강 정보 삭제 성공");
+					System.out.println("좌석 정보 삭제 성공");
 				} else {
-					System.out.println("수강 정보 삭제 실패");
+					System.out.println("좌석 정보 삭제 실패");
 				}
 				pstmt.close();
 				conn.close();
-				response.sendRedirect("oracleWebList.jsp");
+				response.sendRedirect("postgreWebList.jsp");
 			} catch(SQLException e) {
 				System.out.println("SQL 구문 실패");
 			}
