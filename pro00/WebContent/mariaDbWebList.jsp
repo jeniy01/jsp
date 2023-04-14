@@ -36,15 +36,16 @@ th { background-color:#333; color:#fff; }
 </style>
 </head>
 <body>
-	<h2>강좌목록</h2>
+	<h2>과목 목록</h2>
 	<hr>
 	<nav>
 		<a href="index.jsp">메인으로</a>
+		<a href="mariaDbWebInsert.jsp">과목 등록하기</a>
 	</nav>
 	<hr>
 	<table>
 		<thead>
-			<tr><th>아이디</th><th>강좌명</th><th>학점</th><th>요일</th><th>소요시간</th></tr>
+			<tr><th>아이디</th><th>과목명</th><th>학점</th><th>교사코드</th><th>요일</th><th>소요시간</th></tr>
 		</thead>
 		<tbody>
 <%
@@ -75,9 +76,10 @@ th { background-color:#333; color:#fff; }
 		int c = Integer.parseInt(b);  //"12" => 12
 %>
 	<tr>
-		<td><%=rs.getString("id") %></td>
+		<td><a href="mariaDbWebUpdate.jsp?id=<%=rs.getString("id") %>"><%=rs.getString("id") %></a></td>
 		<td><%=rs.getString("name") %></td>
 		<td><%=rs.getInt("credit") %></td>
+		<td><%=rs.getInt("lecturer") %></td>
 		<td><%=w %></td>
 		<td><%=hs %>시간</td>
 	</tr>
