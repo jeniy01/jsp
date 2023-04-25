@@ -35,8 +35,8 @@
 	if(id.equals("admin") && pw.equals("1234")){
 		//response.addCookie(ck);	쿠키로 로그인 처리
 		//session.invalidate;	로그아웃 처리
-		//session.remoteAttribute("id");	세션 id 지우기
-		//session.remoteAttribute("pw");	세션 pw 지우기
+		//session.removeAttribute("id");	세션 id 지우기
+		//session.removeAttribute("pw");	세션 pw 지우기
 		session.setAttribute("id", id);	//세션으로 로그인 처리
 		session.setAttribute("pw", pw);
 		msg = "로그인 성공";

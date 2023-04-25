@@ -18,7 +18,7 @@
 </style>
 </head>
 <body>
-	<h2 class="title">테스트5 폼</h2>
+	<h2 class="title">Response 객체 폼</h2>
 	<form name="login_form" action="test5.jsp" method="post">
 		<table class="table" id="tb1">
 			<tbody>
@@ -33,7 +33,7 @@
 				<tr>
 					<td colspan="2">
 						<input type="submit" value="로그인" class="btn btn-primary"> &nbsp; &nbsp; &nbsp; &nbsp;
-						<input type="reset" value="취소" class=btn>
+						<input type="reset" value="취소" class="btn">
 					</td>
 				</tr>
 			</tbody>

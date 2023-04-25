@@ -58,6 +58,9 @@
 	<div class="msg">
 <%
 	String msg = request.getParameter("msg");
+	if(msg!=null){
+		out.println("<h3>"+msg+"</h3>");
+	}
 %>
 	</div>
 </body>
