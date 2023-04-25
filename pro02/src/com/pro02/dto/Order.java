@@ -1,7 +1,5 @@
 package com.pro02.dto;
 
-//import java.util.Date;
-
 public class Order {
 	private String ocode;
 	private String id;

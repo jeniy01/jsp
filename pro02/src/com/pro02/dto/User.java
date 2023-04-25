@@ -7,6 +7,8 @@ public class User {
 	private String tel;
 	private String addr;
 	private String email;
+	private int point;
+	private int visited;
 	public String getId() {
 		return id;
 	}
@@ -43,9 +45,22 @@ public class User {
 	public void setEmail(String email) {
 		this.email = email;
 	}
+	public int getPoint() {
+		return point;
+	}
+	public void setPoint(int point) {
+		this.point = point;
+	}
+	public int getVisited() {
+		return visited;
+	}
+	public void setVisited(int visited) {
+		this.visited = visited;
+	}
 	@Override
 	public String toString() {
 		return "User [id=" + id + ", pw=" + pw + ", name=" + name + ", tel="
-				+ tel + ", addr=" + addr + ", email=" + email + "]";
+				+ tel + ", addr=" + addr + ", email=" + email + ", point="
+				+ point + ", visited=" + visited + "]";
 	}
 }

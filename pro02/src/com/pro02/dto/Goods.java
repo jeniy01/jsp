@@ -7,6 +7,9 @@ public class Goods {
 	private int price;
 	private String mung;
 	private int amount = 1;
+	private String pic1;
+	private String pic2;
+	private String pic3;
 	public String getGcode() {
 		return gcode;
 	}
@@ -43,10 +46,28 @@ public class Goods {
 	public void setAmount(int amount) {
 		this.amount = amount;
 	}
+	public String getPic1() {
+		return pic1;
+	}
+	public void setPic1(String pic1) {
+		this.pic1 = pic1;
+	}
+	public String getPic2() {
+		return pic2;
+	}
+	public void setPic2(String pic2) {
+		this.pic2 = pic2;
+	}
+	public String getPic3() {
+		return pic3;
+	}
+	public void setPic3(String pic3) {
+		this.pic3 = pic3;
+	}
 	@Override
 	public String toString() {
 		return "Goods [gcode=" + gcode + ", gname=" + gname + ", gram=" + gram
 				+ ", price=" + price + ", mung=" + mung + ", amount=" + amount
-				+ "]";
+				+ ", pic1=" + pic1 + ", pic2=" + pic2 + ", pic3=" + pic3 + "]";
 	}
 }
