@@ -19,18 +19,17 @@
 </head>
 <body>
 <%
-	String userid = (String) application.getInitParameter("userid");
-	String data = (String) application.getAttribute("data");
-	application.setAttribute("data", "1004");
-	String memberId = (String) application.getInitParameter("memberId");
+	//application.setInitParameter("userid", "test1");	web.xml에 등록하여 활용하기(등록했으면 여기서는 사용 못하므로 각주처리함)	 //setAttribute로 사용
+	String userid = (String)application.getInitParameter("userid");
+	application.setAttribute("data", "bbh");
+	String memberId = (String)application.getInitParameter("memberId");
 %>
-<h1 class="title">Global Scope Variable(전역 변수) 점검</h1>
+<h1 class="title">Global Scope Variable(전역 변수)</h1>
 <div class="msg">
 	<nav class="nav">
 		<p>userid : <%=userid %></p>
-		<p>data : <%=data %></p>
 		<p>memberId : <%=memberId %></p>
-		<a href="test1_data.jsp" class="btn btn-primary">처음 페이지로 이동</a>
+		<a href="test2.jsp" class="btn btn-primary">페이지2로 이동</a>
 	</nav>
 </div>
 </body>
