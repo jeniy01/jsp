@@ -13,7 +13,7 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 <style>
 .title { text-align:center; }
-#tb1, .msg { width:800px; margin:0 auto; }
+#tb1, .msg { width:600px; margin:0 auto; }
 .btn { margin-top:20px; }
 </style>
 </head>

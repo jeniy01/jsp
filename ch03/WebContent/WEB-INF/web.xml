@@ -9,15 +9,7 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
-  <filter>
-  	<filter-name>encodingFilter</filter-name>
-  	<filter-class>org.springframework.web.filter.CharacterFilter</filter-class>
-  	<async-supported>false</async-supported>
-  	<init-param>
-  		<param-name>encoding</param-name>
-  		<param-value>UTF-8</param-value>
-  	</init-param>
-  </filter>
+  
   <context-param>
   	<description>전역 변수 설정</description>
   	<param-name>memberId</param-name>
@@ -28,4 +20,20 @@
   	<param-name>userid</param-name>
   	<param-value>test1</param-value>
   </context-param>
+  <error-page>
+  	<error-code>404</error-code>
+  	<location>/notFoundErrorPage.jsp</location>
+  </error-page>
+  <error-page>
+  	<error-code>500</error-code>
+  	<location>/errorPage.jsp</location>
+  </error-page>
+  <error-page>
+  	<exception-type>java.lang.NumberFormatException</exception-type>
+  	<location>/errorPage.jsp</location>
+  </error-page>
+  <error-page>
+  	<exception-type>java.lang.Exception</exception-type>
+  	<location>/errorPage.jsp</location>
+  </error-page>
 </web-app>

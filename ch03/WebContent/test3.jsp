@@ -1,10 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%
+	int num = Integer.parseInt(request.getParameter("num"));
+%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>전역 변수 설정 및 값 출력</title>
+<title>Exception 에러 테스트</title>
 <!-- 합쳐지고 최소화된 최신 CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 <!-- 부가적인 테마 -->
@@ -18,12 +21,9 @@
 </style>
 </head>
 <body>
-<h1 class="title">Global Scope Variable(전역 변수)와 에러페이지</h1>
 <div class="msg">
-	<a href="test1.jsp" class="btn btn-primary">전역 변수 테스트</a>
-	<a href="test404.jsp" class="btn btn-primary">에러 테스트 페이지</a>
-	<a href="test3.jsp" class="btn btn-primary">Exception 에러 테스트</a>
-	<a href="test4.jsp" class="btn btn-primary">인클루드 테스트</a>
+	<h1 class="title">입력된 데이터 에러 테스트</h1>
+	<p style="font-size:16pt"><%=num %></p>
 </div>
 </body>
 </html>

@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>전역 변수 설정 및 값 출력</title>
+<title>Exception 에러 테스트</title>
 <!-- 합쳐지고 최소화된 최신 CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 <!-- 부가적인 테마 -->
@@ -18,12 +18,14 @@
 </style>
 </head>
 <body>
-<h1 class="title">Global Scope Variable(전역 변수)와 에러페이지</h1>
 <div class="msg">
-	<a href="test1.jsp" class="btn btn-primary">전역 변수 테스트</a>
-	<a href="test404.jsp" class="btn btn-primary">에러 테스트 페이지</a>
-	<a href="test3.jsp" class="btn btn-primary">Exception 에러 테스트</a>
-	<a href="test4.jsp" class="btn btn-primary">인클루드 테스트</a>
+	<form action="test3.jsp" method="post">
+		<div class="form-group">
+			<label for="num">입력</label>
+			<input type="text" id="num" name="num" class="form-control"><br>
+		</div>
+		<input type="submit" class="btn btn-primary" value="값 전송">
+	</form>
 </div>
 </body>
 </html>

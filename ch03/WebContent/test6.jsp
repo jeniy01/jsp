@@ -1,10 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%
+	String id = (String)session.getAttribute("id");
+%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>전역 변수 설정 및 값 출력</title>
+<title>Insert title here</title>
 <!-- 합쳐지고 최소화된 최신 CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 <!-- 부가적인 테마 -->
@@ -18,12 +21,17 @@
 </style>
 </head>
 <body>
-<h1 class="title">Global Scope Variable(전역 변수)와 에러페이지</h1>
-<div class="msg">
-	<a href="test1.jsp" class="btn btn-primary">전역 변수 테스트</a>
-	<a href="test404.jsp" class="btn btn-primary">에러 테스트 페이지</a>
-	<a href="test3.jsp" class="btn btn-primary">Exception 에러 테스트</a>
-	<a href="test4.jsp" class="btn btn-primary">인클루드 테스트</a>
+<div class="container">
+	
+	<hr>
+	<div class="content" style="min-height:500px">
+		<h1>세션에 따른 선택</h1>
+		<div class="btn-group">
+			<a href="" class="btn btn-primary">페이지</a>
+		</div>
+	</div>
+	<hr>
+	<%@ include file="ft.jsp" %>
 </div>
 </body>
 </html>
