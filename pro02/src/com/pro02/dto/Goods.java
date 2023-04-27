@@ -64,10 +64,4 @@ public class Goods {
 	public void setPic3(String pic3) {
 		this.pic3 = pic3;
 	}
-	@Override
-	public String toString() {
-		return "Goods [gcode=" + gcode + ", gname=" + gname + ", gram=" + gram
-				+ ", price=" + price + ", mung=" + mung + ", amount=" + amount
-				+ ", pic1=" + pic1 + ", pic2=" + pic2 + ", pic3=" + pic3 + "]";
-	}
 }

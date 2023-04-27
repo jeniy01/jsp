@@ -9,12 +9,10 @@ public class Review {
 	private String rdate;
 	private String hg;
 	private String str;
-	
 	public Review(){
 		Date now = new Date();
 		this.rdate = now.toString();
 	}
-
 	public String getRcode() {
 		return rcode;
 	}
@@ -61,11 +59,5 @@ public class Review {
 
 	public void setStr(String str) {
 		this.str = str;
-	}
-
-	@Override
-	public String toString() {
-		return "Review [rcode=" + rcode + ", id=" + id + ", ocode=" + ocode
-				+ ", rdate=" + rdate + ", hg=" + hg + ", str=" + str + "]";
 	}
 }

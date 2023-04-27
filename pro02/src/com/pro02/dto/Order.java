@@ -71,11 +71,4 @@ public class Order {
 	public void setDcode(String dcode) {
 		this.dcode = dcode;
 	}
-	@Override
-	public String toString() {
-		return "Order [ocode=" + ocode + ", id=" + id + ", pcode=" + pcode
-				+ ", amount=" + amount + ", price=" + price + ", ostate="
-				+ ostate + ", tel=" + tel + ", dname=" + dname + ", addr="
-				+ addr + ", dcode=" + dcode + "]";
-	}
 }

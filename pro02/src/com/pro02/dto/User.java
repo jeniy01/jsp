@@ -1,5 +1,7 @@
 package com.pro02.dto;
 
+import java.util.Date;
+
 public class User {
 	private String id;
 	private String pw;
@@ -7,8 +9,13 @@ public class User {
 	private String tel;
 	private String addr;
 	private String email;
+	private String rdate;
 	private int point;
 	private int visited;
+	public User(){
+		Date now = new Date();
+		this.rdate = now.toString();
+	}
 	public String getId() {
 		return id;
 	}
@@ -45,6 +52,12 @@ public class User {
 	public void setEmail(String email) {
 		this.email = email;
 	}
+	public String getRdate() {
+		return rdate;
+	}
+	public void setRdate(String rdate) {
+		this.rdate = rdate;
+	}
 	public int getPoint() {
 		return point;
 	}
@@ -56,11 +69,5 @@ public class User {
 	}
 	public void setVisited(int visited) {
 		this.visited = visited;
-	}
-	@Override
-	public String toString() {
-		return "User [id=" + id + ", pw=" + pw + ", name=" + name + ", tel="
-				+ tel + ", addr=" + addr + ", email=" + email + ", point="
-				+ point + ", visited=" + visited + "]";
 	}
 }

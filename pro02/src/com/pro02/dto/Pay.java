@@ -10,12 +10,10 @@ public class Pay {
 	private String p_bun;
 	private int price;
 	private String pdate;
-	
 	public Pay(){
 		Date now = new Date();
 		this.pdate = now.toString();
 	}
-
 	public String getPcode() {
 		return pcode;
 	}
@@ -70,12 +68,5 @@ public class Pay {
 
 	public void setPdate(String pdate) {
 		this.pdate = pdate;
-	}
-
-	@Override
-	public String toString() {
-		return "Pay [pcode=" + pcode + ", id=" + id + ", ocode=" + ocode
-				+ ", p_sd=" + p_sd + ", p_bun=" + p_bun + ", price=" + price
-				+ ", pdate=" + pdate + "]";
 	}
 }
