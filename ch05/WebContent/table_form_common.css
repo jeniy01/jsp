@@ -1,0 +1,15 @@
+@CHARSET "UTF-8";
+.msg { width:960px; margin:30px auto; }
+.title { text-align:center; }
+.table { border-collapse:collapse; width:730px; margin:20px auto; }
+.table th,.table td { border-bottom:1px solid #333; padding:10px; } 
+.table td { text-align:left; }
+.table tr:first-child th,.table tr:first-child td { border-top:1px solid #333; }
+input { display:inline-block; line-height:16px; padding:8px 10px; }
+.data_input { width:600px; }
+.btn {  border-radius:42px; outline:0; border:0; cursor:pointer; padding:8px 16px; }
+.btn-default { background-color:#333; color:#fff; }
+.btn-info { background-color:deepskyblue; color:#fff; }
+.btn-alert { background-color:deeppink; color:#fff; }
+.btn-check { background-color:gold; color:#fff; }
+.btn:hover { background-color:#777; }
